@@ -12,10 +12,11 @@ AFloorPad::AFloorPad()
 
 	FloorPadRoot = CreateDefaultSubobject<USceneComponent>(TEXT("FloorPadRoot"));
 	RootComponent = FloorPadRoot;
-
-
+	//Comment
+	
 	FloorPadMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("FloorPadMesh"));
 	FloorPadMesh->AttachToComponent(FloorPadRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	
 }
 
 // Called when the game starts or when spawned
@@ -29,6 +30,11 @@ void AFloorPad::BeginPlay()
 void AFloorPad::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+}
+
+void AFloorPad::OnInteract(AActor* PlayerActor)
+{
 
 }
 

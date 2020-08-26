@@ -4,12 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "iInteract.h"
+
 #include "FloorPad.generated.h"
 
 class UBoxComponent;
 
 UCLASS()
-class WVDOOM_API AFloorPad : public AActor
+class WVDOOM_API AFloorPad : public AActor, public IiInteract
 {
 	GENERATED_BODY()
 	
@@ -27,13 +29,15 @@ public:
 
 
 	UPROPERTY(EditAnywhere)
-		USceneComponent* FloorPadRoot;
+	USceneComponent* FloorPadRoot;
 
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UStaticMeshComponent* FloorPadMesh;
 
 	UPROPERTY(EditAnywhere)
-		UStaticMeshComponent* FloorPadMesh;
+	UBoxComponent* FloorPadBox;
 
-	UPROPERTY(EditAnywhere)
-		UBoxComponent* FloorPadBox;
+	void OnInteract(AActor* PlayerActor);
 
 };

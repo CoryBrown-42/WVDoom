@@ -4,12 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "iInteract.h"
+
 #include "Pickup.generated.h"
+
 
 class UBoxComponent;
 
 UCLASS()
-class WVDOOM_API APickup : public AActor
+class WVDOOM_API APickup : public AActor, IiInteract
 {
 	GENERATED_BODY()
 	
