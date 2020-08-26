@@ -9,6 +9,13 @@ AFloorPad::AFloorPad()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+
+	FloorPadRoot = CreateDefaultSubobject<USceneComponent>(TEXT("FloorPadRoot"));
+	RootComponent = FloorPadRoot;
+
+
+	FloorPadMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("FloorPadMesh"));
+	FloorPadMesh->AttachToComponent(FloorPadRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 }
 
 // Called when the game starts or when spawned

@@ -9,8 +9,11 @@ AJumpPad::AJumpPad()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	PadRoot = CreateDefaultSubObject<USceneComponent>(TEXT("PadRoot"));
+	PadRoot = CreateDefaultSubobject<USceneComponent>(TEXT("PadRoot"));
+	RootComponent = PadRoot;
 
+	PadMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("JumpPadMesh"));
+	PadMesh->AttachToComponent(PadRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 }
 
 // Called when the game starts or when spawned

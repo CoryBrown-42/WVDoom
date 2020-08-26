@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "FloorPad.generated.h"
 
+class UBoxComponent;
+
 UCLASS()
 class WVDOOM_API AFloorPad : public AActor
 {
@@ -22,5 +24,16 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+
+	UPROPERTY(EditAnywhere)
+		USceneComponent* FloorPadRoot;
+
+
+	UPROPERTY(EditAnywhere)
+		UStaticMeshComponent* FloorPadMesh;
+
+	UPROPERTY(EditAnywhere)
+		UBoxComponent* FloorPadBox;
 
 };
