@@ -36,6 +36,10 @@
 				"Win64",
 				"Android"
 			]
+		},
+		{
+			"Name": "Paper2D",
+			"Enabled": false
 		}
 	]
 }
