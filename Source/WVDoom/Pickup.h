@@ -7,6 +7,7 @@
 #include "Pickup.generated.h"
 
 class UBoxComponent;
+
 UCLASS()
 class WVDOOM_API APickup : public AActor
 {
@@ -36,14 +37,5 @@ public:
 	UPROPERTY(EditAnywhere)
 	UBoxComponent* PickupBox;
 
-	UFUNCTION(BlueprintCallable)
-	void OnPlayerEnterPickupBox(
-		UPrimitiveComponent* OverlappedComp,
-        AActor* OtherActor,
-        UPrimitiveComponent* OtherComp,
-        int32 OtherBodyIndex,
-        bool bFromSweep,
-        const FHitResult& SweepResult);
-	
 
 };

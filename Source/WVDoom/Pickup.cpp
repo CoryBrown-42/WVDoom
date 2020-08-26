@@ -17,12 +17,6 @@ APickup::APickup()
 	PickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PickupMesh"));
 	PickupMesh->AttachToComponent(PickupRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 
-	//PickupBox = CreateDefaultSubobject<UBoxComponent>(TEXT("PickupBox"));
-	//PickupBox->SetWorldScale3D(FVector(1.0f, 1.0f, 1.0f));
-	//PickupBox->GenerateOverlapEvents = true;
-
-	//PickupBox->OnComponentBeginOverlap.AddDynamic(this, &APickup::OnPlayerEnterPickupBox);
-
 
 	
 
