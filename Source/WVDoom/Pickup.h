@@ -12,7 +12,7 @@
 class UBoxComponent;
 
 UCLASS()
-class WVDOOM_API APickup : public AActor, IiInteract
+class WVDOOM_API APickup : public AActor, public IiInteract
 {
 	GENERATED_BODY()
 	
@@ -40,5 +40,6 @@ public:
 	UPROPERTY(EditAnywhere)
 	UBoxComponent* PickupBox;
 
+	void OnInteract(AActor* PlayerActor);
 
 };
