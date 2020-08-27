@@ -19,8 +19,6 @@ APickup::APickup()
 
 
 	
-
-	
 }
 
 // Called when the game starts or when spawned
