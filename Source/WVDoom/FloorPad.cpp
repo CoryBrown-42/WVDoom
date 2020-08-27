@@ -3,6 +3,8 @@
 
 #include "FloorPad.h"
 
+#include "PlayerCharacter.h"
+
 // Sets default values
 AFloorPad::AFloorPad()
 {
