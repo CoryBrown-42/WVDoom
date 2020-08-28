@@ -40,6 +40,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	UBoxComponent* PickupBox;
 
+	UFUNCTION(BlueprintCallable, Category = Pickup)
+	void SendPickupToActor(AActor* PlayerActor);
+
 	void OnInteract(AActor* PlayerActor);
 
 };

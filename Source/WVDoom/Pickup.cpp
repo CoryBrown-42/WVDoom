@@ -2,6 +2,7 @@
 
 
 #include "Pickup.h"
+#include "Engine/World.h"
 
 
 
@@ -34,6 +35,15 @@ void APickup::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+void APickup::SendPickupToActor(AActor* PlayerActor)
+{
+	FVector actorLocation = PlayerActor->GetActorLocation();
+	FVector pickupLocation = PickupMesh->GetComponentLocation();
+	PickupMesh->SetWorldLocation(FMath::Lerp(PickupMesh->GetComponentLocation(), actorLocation, 0.01f));
+	
+}
+
 
 
 
