@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "MemeMe.h"
 #include "PluginComponent.h"
+#include "MemeMe.h"
 
 // Sets default values
 APluginComponent::APluginComponent()
