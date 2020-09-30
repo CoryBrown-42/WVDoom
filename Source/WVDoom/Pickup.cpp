@@ -9,7 +9,7 @@
 // Sets default values
 APickup::APickup()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+
 	PrimaryActorTick.bCanEverTick = true;
 
 	PickupRoot = CreateDefaultSubobject<USceneComponent>(TEXT("PickupRoot"));
@@ -17,7 +17,6 @@ APickup::APickup()
 
 	PickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PickupMesh"));
 	PickupMesh->AttachToComponent(PickupRoot, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-
 
 	
 }
