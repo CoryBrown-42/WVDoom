@@ -5,7 +5,8 @@
 
 #include "PlayerCharacter.h"
 
-// Sets default values
+// constructor
+// Sets default values for class
 AFloorPad::AFloorPad()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.

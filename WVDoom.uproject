@@ -2,7 +2,7 @@
 	"FileVersion": 3,
 	"EngineAssociation": "5.0",
 	"Category": "",
-	"Description": "",
+	"Description": "The base project for FPS games used by Wicked Owl Games. This project has pickups, player controllers, Base AI, Ammo, guns, effects.",
 	"Modules": [
 		{
 			"Name": "WVDoom",
@@ -20,7 +20,7 @@
 		},
 		{
 			"Name": "SteamVR",
-			"Enabled": false,
+			"Enabled": true,
 			"SupportedTargetPlatforms": [
 				"Win32",
 				"Win64",
@@ -30,7 +30,7 @@
 		},
 		{
 			"Name": "OculusVR",
-			"Enabled": false,
+			"Enabled": true,
 			"SupportedTargetPlatforms": [
 				"Win32",
 				"Win64",
@@ -59,15 +59,6 @@
 		{
 			"Name": "GooglePAD",
 			"Enabled": false
-		},
-		{
-			"Name": "Bridge",
-			"Enabled": true,
-			"SupportedTargetPlatforms": [
-				"Win64",
-				"Mac",
-				"Linux"
-			]
 		},
 		{
 			"Name": "MemeMe",
